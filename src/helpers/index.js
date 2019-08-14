@@ -3,7 +3,7 @@ export const getRandomPositionArray = length => {
     for (let i = 0; i < length; i++) {
         array.push(i);
     }
-    // radom swap
+    // random swap
     let currentIndex = length;
     while (0 !== currentIndex) {
         let randomIndex = Math.floor(Math.random() * currentIndex);
