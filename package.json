@@ -1,6 +1,6 @@
 {
   "name": "kanji-pro",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "homepage": "https://tichuot.github.io/kanji-pro/",
   "private": true,
   "dependencies": {
@@ -14,7 +14,7 @@
   },
   "scripts": {
     "start": "SKIP_PREFLIGHT_CHECK=true react-scripts start",
-    "build": "react-scripts build",
+    "build": "SKIP_PREFLIGHT_CHECK=true react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
