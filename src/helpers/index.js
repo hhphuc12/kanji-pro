@@ -18,3 +18,8 @@ export const getRandomPositionArray = length => {
 export const randomizeOneOrTwo = () => {
     return Math.random() >= 0.5 ? 1 : 2;
 }
+
+export const randomizeInRange = (min, max) => {
+    if (max < min) return 0;
+    return Math.round(Math.random() * (max - min) + min);
+}
