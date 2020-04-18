@@ -1,19 +1,19 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "ba9ff1e4f5a8d4b7773073ff0d2e52ae",
+    "revision": "65a4a79ecab4322e5398a542e4984335",
     "url": "/kanji-pro/index.html"
   },
   {
-    "revision": "d9e44f27f0f447a1d19c",
+    "revision": "5b96e8e6dc1a425a2663",
     "url": "/kanji-pro/static/css/main.34de6062.chunk.css"
   },
   {
-    "revision": "76451fd4acd7de2d4035",
-    "url": "/kanji-pro/static/js/2.1922cf4c.chunk.js"
+    "revision": "91d371241a3b6585b098",
+    "url": "/kanji-pro/static/js/2.11216daa.chunk.js"
   },
   {
-    "revision": "d9e44f27f0f447a1d19c",
-    "url": "/kanji-pro/static/js/main.fa1afda9.chunk.js"
+    "revision": "5b96e8e6dc1a425a2663",
+    "url": "/kanji-pro/static/js/main.e81581be.chunk.js"
   },
   {
     "revision": "1ffb721212b25b8f224d",
