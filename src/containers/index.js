@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
 import Kanji from './kanji';
+import KanjiSingle from './kanji-single';
 import Kotoba from './kotoba';
 import ContentButton from '../components/contentButton';
 
 const CONTENT = {
     KANJI: 'kanji',
+    KANJI_SINGLE: 'kanji_single',
     KOTOBA: 'kotoba',
 }
 
@@ -22,6 +24,9 @@ export default class Index extends Component {
         const { currentContent } = this.state;
         let contentJSX;
         switch (currentContent) {
+            case CONTENT.KANJI_SINGLE:
+                contentJSX = <KanjiSingle />;
+                break;
             case CONTENT.KOTOBA:
                 contentJSX = <Kotoba />;
                 break;
@@ -31,11 +36,16 @@ export default class Index extends Component {
 
         return (
             <React.Fragment>
-                <div className='d-flex justify-content-center mt-3'>
+                <div className='d-flex justify-content-center pt-3'>
                     <ContentButton
                         isActive={currentContent === CONTENT.KANJI}
                         onPress={() => this.onChangeContent(CONTENT.KANJI)}
                         text='漢字'
+                    />
+                    <ContentButton
+                        isActive={currentContent === CONTENT.KANJI_SINGLE}
+                        onPress={() => this.onChangeContent(CONTENT.KANJI_SINGLE)}
+                        text='シングル漢字'
                     />
                     <ContentButton
                         isActive={currentContent === CONTENT.KOTOBA}

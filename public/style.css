@@ -1,6 +1,12 @@
+#root {
+    background-color: #979797;
+}
 .kanji {
     font-size: 100px;
 }
 .progress-bar-wrapper {
     width: 90%;
+}
+.btn:focus, .btn:active {
+    box-shadow: none;
 }
