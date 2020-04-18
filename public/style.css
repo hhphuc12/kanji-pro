@@ -4,3 +4,6 @@
 .progress-bar-wrapper {
     width: 90%;
 }
+.btn:focus, .btn:active {
+    box-shadow: none;
+}
