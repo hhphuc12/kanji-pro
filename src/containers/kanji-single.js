@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { data } from '../data/kanji-single';
+import { data } from '../data/kanji';
 import { getRandomPositionArray } from '../helpers';
 import Button from '../components/button';
 
@@ -8,20 +8,26 @@ const arrayPos = getRandomPositionArray(data.length);
 class KanjiSingle extends Component {
     constructor(props) {
         super(props);
+        const count = 0;
+        const currentKanji = data[arrayPos[count]];
         this.state = {
-            count: 0,
-            isAnswerViewed: false,
+            count,
+            currentKanji,
+            answerStep: 0,
             isPlaying: false,
         };
     }
 
     onButtonClick = () => {
-        let { count, isAnswerViewed } = this.state;
-        if (!isAnswerViewed) {
-            this.setState({ isAnswerViewed: true });
+        let { count, answerStep, currentKanji } = this.state;
+        let threshold = currentKanji.kun ? 3 : 2;
+        if (answerStep < threshold) {
+            this.setState({ answerStep: answerStep + 1 });
         }
         else {
-            this.setState({ count: ++count, isAnswerViewed: false });
+            count += 1;
+            const currentKanji = data[arrayPos[count]];
+            this.setState({ count, currentKanji, answerStep: 0 });
         }
     };
 
@@ -38,22 +44,42 @@ class KanjiSingle extends Component {
         });
     };
 
+    componentWillUnmount() {
+        if (this.playInterval) {
+            clearInterval(this.playInterval);
+        }
+    }
+
     render() {
         const {
-            count,
-            isAnswerViewed,
+            answerStep,
+            currentKanji,
             isPlaying
         } = this.state;
-        const currentKanji = data[arrayPos[count]].split(",");
+        const { kanji, hanViet, nghia, kun } = currentKanji;
+        let stepAnswerText;
+        switch (answerStep) {
+            case 1:
+                stepAnswerText = hanViet;
+                break;
+            case 2:
+                stepAnswerText = `${hanViet} - ${kun}`;
+                break;
+            case 3:
+                stepAnswerText = `${hanViet} - ${kun} - ${nghia}`;
+                break;
+            default:
+                stepAnswerText = '...';
+        }
 
         return (
             <div className="p-5">
-                <p className="kanji text-center">{currentKanji[0]}</p>
+                <p className="kanji text-center">{kanji}</p>
+                <p className="answer-kanji-single">{stepAnswerText}</p>
                 <div className="d-flex justify-content-center">
                     <div className="d-flex flex-column">
-                        <p className="text-center">{!isAnswerViewed ? "..." : currentKanji[1]}</p>
                         <Button
-                            text={!isAnswerViewed ? "View answer" : "Next"}
+                            text={answerStep < 4 ? "View answer" : "Next"}
                             onClick={this.onButtonClick}
                         />
                     </div>
