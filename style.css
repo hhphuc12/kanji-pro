@@ -1,4 +1,11 @@
+html {
+    height: 100%;
+}
+body {
+    height: 100%;
+}
 #root {
+    height: 100%;
     background-color: #979797;
 }
 .kanji {
@@ -9,4 +16,8 @@
 }
 .btn:focus, .btn:active {
     box-shadow: none;
+}
+.answer-kanji-single {
+    font-size: 22px;
+    text-align: center;
 }
