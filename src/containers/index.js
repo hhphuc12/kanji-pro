@@ -2,12 +2,14 @@ import React, { Component } from 'react';
 import Kanji from './kanji';
 import KanjiSingle from './kanji-single';
 import Kotoba from './kotoba';
+import Doshi from './doshi';
 import ContentButton from '../components/contentButton';
 
 const CONTENT = {
     KANJI: 'kanji',
     KANJI_SINGLE: 'kanji_single',
     KOTOBA: 'kotoba',
+    DOSHI: 'doshi',
 }
 
 export default class Index extends Component {
@@ -30,6 +32,9 @@ export default class Index extends Component {
             case CONTENT.KOTOBA:
                 contentJSX = <Kotoba />;
                 break;
+            case CONTENT.DOSHI:
+                contentJSX = <Doshi />;
+                break;
             default:
                 contentJSX = <Kanji />;
         }
@@ -51,6 +56,11 @@ export default class Index extends Component {
                         isActive={currentContent === CONTENT.KOTOBA}
                         onPress={() => this.onChangeContent(CONTENT.KOTOBA)}
                         text='語彙'
+                    />
+                    <ContentButton
+                        isActive={currentContent === CONTENT.DOSHI}
+                        onPress={() => this.onChangeContent(CONTENT.DOSHI)}
+                        text='動詞'
                     />
                 </div>
                 {contentJSX}
