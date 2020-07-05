@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "57f20e8dfee482496a88029c2d40beac",
+    "revision": "136ccf985aa7c27c433f82252d0f68ee",
     "url": "/kanji-pro/index.html"
   },
   {
-    "revision": "0c899f7ba5f48ff51927",
+    "revision": "b1cc0810d7b94fbbe1d7",
     "url": "/kanji-pro/static/css/main.34de6062.chunk.css"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/kanji-pro/static/js/2.7b50fd13.chunk.js"
   },
   {
-    "revision": "0c899f7ba5f48ff51927",
-    "url": "/kanji-pro/static/js/main.e61d89d0.chunk.js"
+    "revision": "b1cc0810d7b94fbbe1d7",
+    "url": "/kanji-pro/static/js/main.e37135b3.chunk.js"
   },
   {
     "revision": "1ffb721212b25b8f224d",
