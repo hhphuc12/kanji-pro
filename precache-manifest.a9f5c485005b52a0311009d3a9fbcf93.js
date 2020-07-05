@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "09d76715472146b54c8afa152cf62abc",
+    "revision": "57f20e8dfee482496a88029c2d40beac",
     "url": "/kanji-pro/index.html"
   },
   {
