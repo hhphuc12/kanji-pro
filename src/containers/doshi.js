@@ -35,7 +35,7 @@ class Doshi extends Component {
             if (this.state.isPlaying) {
                 this.playInterval = setInterval(() => {
                     this.onButtonClick();
-                }, 1500);
+                }, 3000);
             }
             else {
                 clearInterval(this.playInterval);
