@@ -3,20 +3,22 @@ import Kanji from './kanji';
 import KanjiSingle from './kanji-single';
 import Kotoba from './kotoba';
 import Doshi from './doshi';
-import ContentButton from '../components/contentButton';
+import Bunpo from './bunpo';
+import Dropdown from '../components/dropdown';
 
-const CONTENT = {
-    KANJI: 'kanji',
-    KANJI_SINGLE: 'kanji_single',
-    KOTOBA: 'kotoba',
-    DOSHI: 'doshi',
-}
+const CONTENT = [
+    '[JIL]漢字',
+    '[JIL]シングル漢字',
+    '[JIL]語彙',
+    '[Rakuraku]動詞',
+    '[Rakuraku]文法',
+];
 
 export default class Index extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            currentContent: CONTENT.KANJI,
+            currentContent: '',
         }
     }
 
@@ -26,42 +28,32 @@ export default class Index extends Component {
         const { currentContent } = this.state;
         let contentJSX;
         switch (currentContent) {
-            case CONTENT.KANJI_SINGLE:
+            case '[JIL]漢字':
+                contentJSX = <Kanji />;
+                break;
+            case '[JIL]シングル漢字':
                 contentJSX = <KanjiSingle />;
                 break;
-            case CONTENT.KOTOBA:
+            case '[JIL]語彙':
                 contentJSX = <Kotoba />;
                 break;
-            case CONTENT.DOSHI:
+            case '[Rakuraku]動詞':
                 contentJSX = <Doshi />;
                 break;
+            case '[Rakuraku]文法':
+                contentJSX = <Bunpo />;
+                break;
             default:
-                contentJSX = <Kanji />;
+                contentJSX = <div />;
         }
 
         return (
             <React.Fragment>
                 <div className='d-flex justify-content-center pt-3'>
-                    <ContentButton
-                        isActive={currentContent === CONTENT.KANJI}
-                        onPress={() => this.onChangeContent(CONTENT.KANJI)}
-                        text='漢字'
-                    />
-                    <ContentButton
-                        isActive={currentContent === CONTENT.KANJI_SINGLE}
-                        onPress={() => this.onChangeContent(CONTENT.KANJI_SINGLE)}
-                        text='シングル漢字'
-                    />
-                    <ContentButton
-                        isActive={currentContent === CONTENT.KOTOBA}
-                        onPress={() => this.onChangeContent(CONTENT.KOTOBA)}
-                        text='語彙'
-                    />
-                    <ContentButton
-                        isActive={currentContent === CONTENT.DOSHI}
-                        onPress={() => this.onChangeContent(CONTENT.DOSHI)}
-                        text='動詞'
-                    />
+                <Dropdown
+                    items={CONTENT}
+                    onChange={this.onChangeContent}
+                />
                 </div>
                 {contentJSX}
             </React.Fragment>
