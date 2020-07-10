@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/kanji-pro/static/css/main.34de6062.chunk.css",
-    "main.js": "/kanji-pro/static/js/main.e37135b3.chunk.js",
-    "main.js.map": "/kanji-pro/static/js/main.e37135b3.chunk.js.map",
+    "main.js": "/kanji-pro/static/js/main.94fa2ed7.chunk.js",
+    "main.js.map": "/kanji-pro/static/js/main.94fa2ed7.chunk.js.map",
     "runtime~main.js": "/kanji-pro/static/js/runtime~main.c00cc48e.js",
     "runtime~main.js.map": "/kanji-pro/static/js/runtime~main.c00cc48e.js.map",
-    "static/js/2.7b50fd13.chunk.js": "/kanji-pro/static/js/2.7b50fd13.chunk.js",
-    "static/js/2.7b50fd13.chunk.js.map": "/kanji-pro/static/js/2.7b50fd13.chunk.js.map",
+    "static/js/2.fcfc078f.chunk.js": "/kanji-pro/static/js/2.fcfc078f.chunk.js",
+    "static/js/2.fcfc078f.chunk.js.map": "/kanji-pro/static/js/2.fcfc078f.chunk.js.map",
     "index.html": "/kanji-pro/index.html",
-    "precache-manifest.968f57e493d9edcb86394c765b2afd2d.js": "/kanji-pro/precache-manifest.968f57e493d9edcb86394c765b2afd2d.js",
+    "precache-manifest.aa5e014cd980e85eacb972624951a22f.js": "/kanji-pro/precache-manifest.aa5e014cd980e85eacb972624951a22f.js",
     "service-worker.js": "/kanji-pro/service-worker.js",
     "static/css/main.34de6062.chunk.css.map": "/kanji-pro/static/css/main.34de6062.chunk.css.map"
   }
